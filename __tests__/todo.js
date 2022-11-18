@@ -20,21 +20,21 @@ describe("TodoList Test Suite", () => {
     expect(all.length).toBe(todoItemsCount + 1);
   });
 
-  test("must mark todo as completed", () => {
+  test("mark todo as completed", () => {
     expect(all[0].completed).toBe(false);
     markAsComplete(0);
     expect(all[0].completed).toBe(true);
   });
 
-  test("must check retrieval of overdue items", () => {
+  test("retrieve overdue items", () => {
     expect(overdue().length).toBe(0);
   });
 
-  test("must check retrieval of dueToday items", () => {
+  test("retrieve dueToday items", () => {
     expect(dueToday().length).toBe(2);
   });
 
-  test("must check retrieval of dueLater items", () => {
+  test("retrieve dueLater items", () => {
     expect(dueLater().length).toBe(0);
   });
 });
