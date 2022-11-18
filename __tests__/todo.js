@@ -10,7 +10,7 @@ describe("TodoList Test Suite", () => {
       dueDate: new Date().toLocaleDateString("en-CA"),
     });
   });
-  test("Should add new todo", () => {
+  test("must add new todo", () => {
     const todoItemsCount = all.length;
     add({
       title: "Test todo",
@@ -20,21 +20,21 @@ describe("TodoList Test Suite", () => {
     expect(all.length).toBe(todoItemsCount + 1);
   });
 
-  test("....Should mark todo as completed", () => {
+  test("must mark todo as completed", () => {
     expect(all[0].completed).toBe(false);
     markAsComplete(0);
     expect(all[0].completed).toBe(true);
   });
 
-  test(".... check retrieval of overdue items", () => {
+  test("must check retrieval of overdue items", () => {
     expect(overdue().length).toBe(0);
   });
 
-  test(".... check retrieval of dueToday items", () => {
+  test("must check retrieval of dueToday items", () => {
     expect(dueToday().length).toBe(2);
   });
 
-  test("....check retrieval of dueLater items", () => {
+  test("must check retrieval of dueLater items", () => {
     expect(dueLater().length).toBe(0);
   });
 });
